@@ -10,9 +10,11 @@ import { hooks as metaMaskHooks, metaMask } from '../connectors/metaMask'
 import { hooks as networkHooks, network } from '../connectors/network'
 import { hooks as walletConnectHooks, walletConnect } from '../connectors/walletConnect'
 import { hooks as walletConnectV2Hooks, walletConnectV2 } from '../connectors/walletConnectV2'
+import { hooks as bloctoHooks , bloctoSDK } from '../connectors/bloctoSdk'
 import { getName } from '../utils'
 
-const connectors: [MetaMask | WalletConnect | WalletConnectV2 | CoinbaseWallet | Network, Web3ReactHooks][] = [
+const connectors: [bloctoSDK | MetaMask | WalletConnect | WalletConnectV2 | CoinbaseWallet | Network, Web3ReactHooks][] = [
+  [bloctoSDK, bloctoHooks],
   [metaMask, metaMaskHooks],
   [walletConnect, walletConnectHooks],
   [walletConnectV2, walletConnectV2Hooks],
